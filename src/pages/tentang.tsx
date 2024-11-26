@@ -2,6 +2,11 @@ import { createSignal, onMount } from "solid-js";
 import "./tentang.css";
 import Navbar from "./Navbar";
 
+import logo from "../../public/img/logoweb.png";
+import x from "../../public/img/twitter-icon.png";
+import fb from "../../public/img/fb.png";
+import instagram from "../../public/img/instagram-icon.png";
+
 export default function Tentang() {
   return (
     <section class="landing-page">
@@ -49,7 +54,7 @@ export default function Tentang() {
       <footer class="footer">
         <div class="footer-top">
           <div class="footer-logo">
-            <img src="public\img\logoweb.png" alt="Logoweb" />
+            <img src={logo} alt="Logoweb" />
           </div>
           <div class="footer-content">
             <div class="footer-links">
@@ -82,17 +87,17 @@ export default function Tentang() {
               <ul>
                 <li>
                   <a href="#">
-                    <img src="public\img\facebook-icon.png" alt="Facebook" />
+                    <img src={fb} alt="Facebook" />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="public\img\twitter-icon.png" alt="Twitter" />
+                    <img src={x} alt="Twitter" />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="public\img\instagram-icon.png" alt="Instagram" />
+                    <img src={instagram} alt="Instagram" />
                   </a>
                 </li>
               </ul>
