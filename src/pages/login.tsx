@@ -3,6 +3,10 @@ import { useNavigate } from "@solidjs/router";
 import "./login.css";
 import "boxicons/css/boxicons.min.css";
 
+import logo from "../../public/img/logoweb.png";
+import google from "../../public/img/google.png";
+import fb from "../../public/img/fb.png";
+
 const Login = () => {
   const [email, setEmail] = createSignal("");
   const [password, setPassword] = createSignal("");
@@ -52,16 +56,16 @@ const Login = () => {
     <section>
       <div class="container">
         <div class="form-containner">
-          <img class="navbarr" src="public/img/logoweb.png" alt="logo" />
+          <img class="navbarr" src={logo} alt="logo" />
           <h2>Masuk ke akun Anda</h2>
           <p>Selamat datang kembali! Pilih metode untuk login:</p>
           <div class="social-login">
             <button class="google">
-              <img src="public/img/google.png" alt="google logo" />
+              <img src={google} alt="google logo" />
               Google
             </button>
             <button class="facebook">
-              <img src="public/img/fb.png" alt="facebook logo" />
+              <img src={fb} alt="facebook logo" />
               Facebook
             </button>
           </div>
