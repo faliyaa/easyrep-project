@@ -1,6 +1,6 @@
 import { createSignal, onMount } from "solid-js";
-import { HiOutlineBars3 } from 'solid-icons/hi'
-
+import { HiOutlineBars3 } from 'solid-icons/hi';
+import logo from "../../public/img/logoweb.png";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -27,7 +27,7 @@ export default function Navbar() {
         <section class="landing-page">
             <nav class={`navbar ${isMenuOpen() ? "responsive" : ""}`}>
                 <div class="logo">
-                    <img src="public/img/logoweb.png" alt="Logoweb" />
+                    <img src={logo} alt="Logoweb" />
                 </div>
                 <div class="menu-toggle" onClick={toggleMenu}>
                     {isMenuOpen() ? <HiOutlineBars3 size={24} /> : <HiOutlineBars3 size={24} />} {/* Ikon garis tiga atau silang */}
