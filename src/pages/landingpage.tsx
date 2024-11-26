@@ -5,6 +5,13 @@ import { BsTelephoneFill } from "solid-icons/bs";
 import { AiOutlineMail } from "solid-icons/ai";
 import Navbar from "./Navbar";
 
+import logo from "../../public/img/logoweb.png";
+import x from "../../public/img/twitter-icon.png";
+import fb from "../../public/img/fb.png";
+import instagram from "../../public/img/instagram-icon.png";
+import illustration from "../../public/img/ilustrasi2.png";
+import centang from "../../public/img/centangg.png";
+
 export default function LandingPage() {
   const [loggedInUser, setLoggedInUser] = createSignal<string | null>(null);
   const [fileName, setFileName] = createSignal("Upload Lampiran (Max 10 MB)");
@@ -124,7 +131,7 @@ export default function LandingPage() {
             Get Started
           </a>
         </div>
-        <img src="public/img/ilustrasi2.png" alt="Illustration" class="header-image" />
+        <img src={illustration} alt="Illustration" class="header-image" />
       </header>
       <div class="form-pagee">
         <div class="form-containeer">
@@ -150,7 +157,7 @@ export default function LandingPage() {
           </form>
           {showPopup() && (
             <div class="popup">
-              <img src="public/img/centangg.png" alt="Check" class="check-icon" />
+              <img src={centang} alt="Check" class="check-icon" />
               <p>Laporan Anda akan segera diproses</p>
               <button onclick={() => (window.location.href = "/history")} class="btn">
                 Cek Laporanmu!
@@ -251,7 +258,7 @@ export default function LandingPage() {
           </form>
           {showMessagePopup() && (
             <div class="popup">
-              <img src="public/img/centangg.png" alt="Check" class="check-icon" />
+              <img src={centang} alt="Check" class="check-icon" />
               <p>Pesan Anda telah terkirim</p>
             </div>
           )}
@@ -260,7 +267,7 @@ export default function LandingPage() {
       <footer class="footer">
         <div class="footer-top">
           <div class="footer-logo">
-            <img src="public\img\logoweb.png" alt="Logoweb" />
+            <img src={logo} alt="Logoweb" />
           </div>
           <div class="footer-content">
             <div class="footer-links">
@@ -293,17 +300,17 @@ export default function LandingPage() {
               <ul>
                 <li>
                   <a href="#">
-                    <img src="public\img\facebook-icon.png" alt="Facebook" />
+                    <img src={fb} alt="Facebook" />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="public\img\twitter-icon.png" alt="Twitter" />
+                    <img src={x} alt="Twitter" />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="public\img\instagram-icon.png" alt="Instagram" />
+                    <img src={instagram} alt="Instagram" />
                   </a>
                 </li>
               </ul>
