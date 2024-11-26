@@ -1,6 +1,10 @@
 import { createSignal } from "solid-js";
 import "./register.css";
 
+import logo from "../../public/img/logoweb.png";
+import google from "../../public/img/google.png";
+import fb from "../../public/img/fb.png";
+
 export default function Register() {
   const [username, setUsername] = createSignal("");
   const [email, setEmail] = createSignal("");
@@ -45,16 +49,16 @@ export default function Register() {
     <section>
       <div class="container">
         <div class="form-containerr">
-          <img class="navbarrr" src="public/img/logoweb.png" alt="logo" />
+          <img class="navbarrr" src={logo} alt="logo" />
           <h1>Buat akun Anda!</h1>
           <p class="desc">Selamat datang! Silahkan masukkan informasi Anda</p>
           <div class="social-login">
             <button class="google">
-              <img src="public/img/google.png" alt="google logo" />
+              <img src={google} alt="google logo" />
               Google
             </button>
             <button class="facebook">
-              <img src="public/img/fb.png" alt="facebook logo" />
+              <img src={fb} alt="facebook logo" />
               Facebook
             </button>
           </div>
