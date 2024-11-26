@@ -7,7 +7,7 @@ import Navbar from "./Navbar";
 
 import logo from "../../public/img/logoweb.png";
 import x from "../../public/img/twitter-icon.png";
-import fb from "../../public/img/fb.png";
+import fb from "../../public/img/facebook-icon.png";
 import instagram from "../../public/img/instagram-icon.png";
 import illustration from "../../public/img/ilustrasi2.png";
 import centang from "../../public/img/centangg.png";
