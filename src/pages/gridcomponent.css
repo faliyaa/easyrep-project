@@ -1,0 +1,107 @@
+html,
+body {
+  background: #060714;
+  color: #fff;
+  margin: 0; /* Reset margin untuk keseluruhan halaman */
+  padding: 0; /* Reset padding untuk keseluruhan halaman */
+  height: 100%;
+  width: 100%;
+}
+
+.page-container {
+  display: flex;
+  height: 100vh; /* Menyesuaikan tinggi komponen agar penuh pada layar */
+  overflow: hidden; /* Mengatur overflow menjadi hidden untuk mencegah scroll */
+}
+
+#sidebar {
+  width: 280px;
+  height: 100%;
+  background-color: #060714; /* Warna background sidebar */
+  color: #fbfbfb; /* Warna teks di sidebar */
+  z-index: 1000;
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+}
+
+.ccontent {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Mengatur konten menjadi kolom */
+  justify-content: flex-start; /* Menyusun konten dari atas ke bawah */
+  align-items: center;
+  padding-left: 180px; /* Menambahkan padding agar konten tidak tertutup sidebar */
+  overflow-y: auto; /* Mengaktifkan overflow-y jika konten melebihi tinggi viewport */
+}
+
+.ccontent h1 {
+  font-size: 26px;
+  margin-top: 20px;
+  margin-left: -900px;
+}
+
+.grid-wrapper {
+  width: calc(100% - 290px); /* Menghitung lebar grid agar tidak tertutup oleh sidebar */
+  height: 80vh;
+  overflow: auto; /* Mengaktifkan overflow jika diperlukan */
+  padding: 20px; /* Menambahkan padding agar grid tidak terlalu dekat dengan tepi */
+}
+
+/* Custom style for AG Grid */
+.ag-theme-alpine {
+  --ag-background-color: #222436;
+  --ag-odd-row-background-color: #222436;
+  --ag-header-background-color: #222436;
+  --ag-foreground-color: white; /* Optional: For text color */
+}
+
+.role-dropdown {
+  width: 40%;
+  padding: 5px 5px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #8a2be2; /* Warna latar belakang ungu */
+  color: #fff; /* Warna teks putih */
+}
+
+#sidebar .side-menu {
+  margin-top: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+#sidebar .side-menu li {
+  margin-bottom: 10px;
+}
+
+#sidebar .side-menu li a {
+  display: block;
+  padding: 12px;
+  border-radius: 10px;
+  color: #fbfbfb;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+#sidebar .side-menu li a:hover {
+  background-color: #342e37; /* Warna hover untuk menu sidebar */
+}
+
+#sidebar .side-menu li.active a {
+  background-color: #342e37; /* Warna menu aktif pada sidebar */
+}
+
+#sidebar .side-menu li a .bx {
+  margin-right: 10px;
+}
+
+#sidebar .side-menu li a.logout {
+  color: #db504a; /* Warna untuk menu logout */
+  margin-top: auto; /* Mendorong logout ke bawah */
+}
+
+#sidebar .side-menu li a.logout:hover {
+  background-color: #342e37; /* Warna hover untuk menu logout */
+}

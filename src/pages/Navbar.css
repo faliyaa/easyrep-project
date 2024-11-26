@@ -1,0 +1,138 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1b1b1b;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Logo styling */
+.logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+/* Styling for navigation links */
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+/* Auth buttons styling */
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.auth-buttons a,
+.auth-buttons button {
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.auth-buttons a:hover,
+.auth-buttons button:hover {
+    background-color: #00bcd4;
+    color: #1b1b1b;
+    border-color: #00bcd4;
+}
+
+/* Logout button styling */
+.logout {
+    border: none;
+}
+
+/* Menu toggle button - garis tiga */
+.navbar .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Tanda silang untuk menutup menu */
+.navbar .close-menu {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* For smaller screen sizes (responsive layout) */
+@media (max-width: 768px) {
+
+    /* Hide nav links by default */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding: 1rem 0;
+        background-color: #1b1b1b;
+        gap: 0.5rem;
+    }
+
+    /* Show menu toggle button */
+    .navbar .menu-toggle {
+        display: block;
+    }
+
+    /* Show close button when menu is open */
+    .navbar.responsive .close-menu {
+        display: block;
+    }
+
+    /* Show auth buttons when menu is open */
+    .navbar.responsive .auth-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* When menu is open (responsive) */
+    .navbar.responsive .nav-links {
+        display: flex;
+    }
+
+    /* Adjust auth buttons layout in responsive mode */
+    .navbar.responsive .auth-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

@@ -1,0 +1,29 @@
+.containerpw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.form-containerpw {
+    background: #1b1b1b;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-containerpw .pw h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+button.submit-btnpw {
+    background-color: #9a6dd4;
+}
+
+button.submit-btnpw:hover {
+    background-color: #663b9e;
+}

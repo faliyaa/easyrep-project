@@ -1,0 +1,86 @@
+/* editdata.css */
+.editdata-container {
+  padding: 20px;
+}
+
+.editdata-container h1 {
+  font-size: 26px;
+  margin-top: 20px;
+  margin-left: -260px;
+}
+
+.editdata-container form {
+  width: 600px;
+  margin-left: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.editdata-container label {
+  margin-bottom: 10px;
+}
+.password-container i {
+  position: absolute;
+  cursor: pointer;
+  font-size: 20px; /* Set the size of the icon */
+}
+.editdata-container .password-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.editdata-container .password-container input {
+  padding-right: 40px; /* Give space for the icon */
+}
+
+.editdata-container .password-container i {
+  position: absolute;
+  right: 16px;
+  top: 36px; /* Adjust to align with input */
+  cursor: pointer;
+}
+
+.editdata-container select {
+  border-radius: 6px;
+  background-color: #3e3e3e;
+  color: #fff; /* Ensure the text is readable */
+  margin-left: 10px;
+}
+
+.editdata-container input,
+.editdata-container select {
+  margin-top: 5px;
+  padding: 8px;
+  border: 1px solid #3e3e3e;
+  border-radius: 4px;
+}
+
+.editdata-container .button-group {
+  display: flex;
+  gap: 10px; /* Adds space between buttons */
+  margin-top: 10px;
+}
+
+.editdata-container button {
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #ae8ef1;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.editdata-container button.cancel {
+  background-color: #3e3e3e;
+}
+
+.editdata-container button:hover {
+  background-color: #9257ff; /* Slightly darker shade for hover effect */
+}
+
+.editdata-container button.cancel:hover {
+  background-color: #555555; /* Slightly lighter shade for cancel button hover effect */
+}

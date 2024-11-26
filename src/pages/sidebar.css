@@ -1,0 +1,94 @@
+#sidebar {
+  position: fixed;
+  top: -40px;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  background-color: #1b1b1b; /* Warna background sidebar */
+  color: #FBFBFB; /* Warna teks di sidebar */
+  z-index: 1000;
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+}
+
+#sidebar .brand {
+  display: block;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ae8ef1;
+  text-decoration: none;
+}
+
+#sidebar .brand .bx {
+  font-size: 28px;
+  margin-right: 10px;
+  margin-bottom: 2px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#sidebar .side-menu {
+  margin-top: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+#sidebar .side-menu li {
+  margin-bottom: 10px;
+}
+
+#sidebar .side-menu li a {
+  display: block;
+  padding: 12px;
+  border-radius: 10px;
+  color: #FBFBFB;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+#sidebar .side-menu li a:hover {
+  background-color: #342E37; /* Warna hover untuk menu sidebar */
+}
+
+#sidebar .side-menu li.active a {
+  background-color: #342E37; /* Warna menu aktif pada sidebar */
+}
+
+#sidebar .side-menu li a .bx {
+  margin-right: 10px;
+}
+
+#sidebar .side-menu li a.logout {
+  color: #DB504A; /* Warna untuk menu logout */
+}
+
+#sidebar .side-menu li a.logout:hover {
+  background-color: #342E37; /* Warna hover untuk menu logout */
+}
+
+#sidebar .side-menu li.logout-item {
+  margin-top: auto; /* Menempatkan bagian logout ke bagian bawah */
+}
+
+#sidebar.hide {
+  width: 60px;
+}
+
+#sidebar.hide .brand .bx {
+  display: none;
+}
+
+#sidebar.hide .brand .text {
+  display: none;
+}
+
+#sidebar.hide .side-menu li a .bx {
+  display: none;
+}
+
+#sidebar.hide .side-menu li a .text {
+  display: none;
+}

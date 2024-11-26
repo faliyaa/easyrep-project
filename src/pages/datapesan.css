@@ -1,0 +1,36 @@
+.messages-page {
+  padding: 0px;
+}
+.messages-page h2 {
+  font-size: 26px;
+  text-align: left;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+.messages-page .ag-theme-alpine {
+  margin-left: 100px;
+  margin-top: 40px;
+}
+
+.ag-header {
+  border-bottom: 1px solid #444; 
+  border-top: 1px solid #444;
+}
+.ag-header-cell {
+  white-space: nowrap; 
+}
+
+.ag-cell {
+  min-width: 50px; /* Lebar minimum kolom */
+  padding: 10px; /* Padding untuk sel */
+  border-bottom: 1px solid #646464; /* Garis bawah sel */
+  font-size: 14px; /* Ukuran font untuk isi sel */
+  line-height: 30px; /* Tinggi garis untuk membuat kolom lebih lebar secara vertikal */
+}
+
+@media (max-width: 768px) {
+  .ag-theme-alpine {
+    width: 100%;
+    height: auto;
+  }
+}

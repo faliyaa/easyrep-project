@@ -1,0 +1,678 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1b1b1b;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.nav-links {
+  color: #9a6dd4;
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: #9a6dd4;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e0e0ff;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.auth-buttons a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.login {
+  color: white;
+  border: 1px solid #9a6dd4;
+}
+
+.login:hover {
+  background-color: #663b9e;
+  color: #fff;
+}
+
+.register {
+  background-color: #9a6dd4;
+  color: #ffffff;
+}
+
+.register:hover {
+  background-color: #663b9e;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 1;
+  margin-top: 150px; 
+}
+
+.header-content {
+  max-width: 1000px;
+}
+
+.header h1 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 3rem;
+  margin: 0;
+  line-height: 1.2;
+  margin-left: -1.2rem;
+  font-weight: 600;
+}
+
+.header h1 span {
+  color: #9a6dd4;
+}
+
+.header p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #9a6dd4;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #663b9e;
+}
+
+.header-image {
+  max-width: 400px;
+  width: 100%;
+  margin-right: -4rem;
+  transition: transform 0.3s ease;
+
+}
+
+.header-image:hover {
+  transform: scale(1.05);
+}
+
+.form-pagee {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+}
+
+.form-containeer {
+  background: #1b1b1b;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  max-width: 900px;
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form-header h2 {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  color: #9a6dd4;
+}
+
+.form-header p {
+  margin: 0.5rem 0;
+  color: #e0e0ff;
+}
+
+.form-header .tooltip {
+  color: #a3a3ff;
+  text-decoration: none;
+  border-bottom: 1px dotted #a3a3ff;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-pagee [type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 0.2rem;
+  border: 1px solid #333;
+  background: #333;
+  color: white;
+  resize: none;
+  font-size: 14px;
+}
+
+input[type="text"]::placeholder,
+input[type="date"]::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+
+.file-upload {
+  position: relative;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-upload label {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px dashed #9a6dd4;
+  border-radius: 10px;
+  background: #1b1b1b;
+  text-align: center;
+  color: #9a6dd4;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  background: #9a6dd4;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #663b9e;
+}
+
+.section__header {
+  font-size: 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: rgb(228, 228, 228); 
+  margin-top: 20px;
+  text-align: center;
+}
+
+.section__subheader {
+  font-size: 30px; 
+  color: rgb(255, 255, 255); 
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: -20px;
+  text-align: center;
+}
+
+.break {
+  display: block; 
+}
+
+.feature_container :is(.sectionsubheader, .section_header) {
+  text-align: center; /* Pusatkan teks pada judul dan subjudul */
+}
+
+.feature__grid {
+  margin-top: 8rem; /* Meningkatkan margin-top untuk memindahkan kartu fitur ke bawah */
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr); /* Menetapkan grid untuk kartu fitur */
+}
+
+.feature__card {
+  padding: 2rem 1rem;
+  text-align: right;
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8); /* Bayangan putih dengan opasitas tinggi */
+  color: #333; /* Warna teks berdasarkan warna item */
+  border-radius: 10px; /* Membuat sudut sedikit melengkung */
+  background-color: #e4dcf3;
+  transition: transform 0.3s ease;
+
+}
+
+.feature__card > div {
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: 500;
+  color: #6a5acd; /* Warna primer */
+  transform: rotate(-90deg);
+}
+
+.feature__card h4 {
+  margin-block: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #483d8b; /* Warna teks gelap */
+}
+
+.feature__card p {
+  color: #696969; /* Warna teks terang */
+}
+
+.feature__card:nth-child(2n) {
+  transform: translateY(-3rem); /* Disesuaikan untuk memindahkan kartu dengan nomor genap ke bawah */
+}
+.feature__card:hover {
+  transform: scale(1.05);
+}
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 10px;
+}
+.contact-container h3 {
+  margin-bottom: 100px;
+}
+.contact-info {
+  background-color: #1b1b1b;
+  padding: 40px;
+  margin-right: 20px;
+  margin-top: 190px;
+  height: 490px;
+  width: 400px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.contact-info .info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 50px;
+}
+
+.contact-info .icon {
+  font-size: 34px;
+  margin-right: 10px;
+  color: #ac7ff4;
+}
+
+.contact-info .details h3 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin: 0 0 5px;
+  font-size: 18px;
+  color: #ac7ff4;
+}
+
+.contact-info .details p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin: 0;
+  font-size: 14px;
+}
+
+.contact-form {
+  background-color: #1b1b1b;
+  padding: 30px;
+  padding-bottom: 10px;
+  width: 800px;
+  max-width: 100%;
+  margin-left: 50px;
+  margin-right: -10px;
+  margin-top: 190px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 0;
+  color: #9a6dd4;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.contact-form p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 0;
+  color: #c2c2d8;
+  margin-bottom: 20px;
+  margin-top: -10px;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  border: 1px solid #333;
+  background: #333;
+  font-size: 14px;
+}
+
+.contact-form form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #9a6dd4;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.contact-form form button:hover {
+  background-color: #663b9e;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.popup .check-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+.popup p {
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+}
+
+.landing-page .form-container {
+  position: relative;
+}
+
+.landing-page .form-container .popup {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: #1b1b1b;
+  color: #e0e0ff;
+  padding: 2rem 1rem;
+  position: relative;
+  width: 143%;
+  margin-top: 7rem;
+  margin-left: -14rem;
+  margin-bottom: -8rem;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.footer-logo {
+  flex: 1 1 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Menyelaraskan elemen di tengah secara vertikal */
+  margin-bottom: -1.5rem;
+  margin-right: 950px; 
+}
+
+.footer-logo img {
+  height: 50px; /* Sesuaikan tinggi gambar sesuai kebutuhan */
+  width: auto; /* Atur lebar gambar agar sesuai dengan tinggi yang sudah ditetapkan */
+  margin-bottom: -50px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: 300px;
+}
+
+.footer-contact {
+  flex: 1 1 200px;
+  min-width: 200px; 
+  margin-right: 6rem;
+  padding: 0; /* Menghilangkan padding */
+}
+
+.footer-links {
+  margin-left: 7rem;
+  margin-right: 5rem; /* Menggeser ke kiri dengan memberikan margin kanan otomatis */
+}
+
+.footer-contact,
+.footer-socials {
+  flex: 1 1 200px;
+  min-width: 200px;
+  margin-left: 16px;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-socials h3 {
+  margin-bottom: 1rem;
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #a3a3ff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-socials ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-socials li {
+  display: inline;
+}
+
+.footer-socials a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.footer-socials img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-contact ul {
+  padding: 0;
+}
+
+.footer-contact li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+
+.logout:hover {
+  background-color: #663b9e; /* Warna latar belakang ungu lebih gelap saat dihover */
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+
+  .auth-buttons {
+    display: none; /* Sembunyikan auth-buttons */
+    flex-direction: column;
+  }
+
+  .auth-buttons.active {
+    display: flex; /* Tampilkan auth-buttons saat menu aktif */
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #a3a3ff;
+  }
+}
+
+@media (max-width: 415px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+
+  .logo span {
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    top: 50px;
+    height: calc(100vh - 50px);
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links,
+  .footer-contact,
+  .footer-socials {
+    text-align: center;
+  }
+
+  .footer-links ul,
+  .footer-contact ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .footer-socials ul {
+    gap: 0.5rem;
+  }
+}

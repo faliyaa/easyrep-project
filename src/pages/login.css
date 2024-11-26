@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+body {
+  background: #070a29;
+  color: #fff;
+  padding: 1rem;
+  margin: 30px 50px 40px 90px; /* Atur margin: atas, kanan, bawah, kiri */
+}
+
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  flex-wrap: wrap; /* Ensure elements wrap in smaller screens */
+}
+
+.form-containner {
+  background: #1b1b1b;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  max-width: 900px;
+  width: 100%;
+  box-sizing: border-box;
+  flex: 1;
+  margin: 1rem;
+}
+
+.image-containerr {
+  flex: 1;
+  background-image: url("../img/gambar-login.png");
+  background-size: cover; /* Mengubah menjadi cover agar lebih responsif */
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  color: #fff;
+  border-radius: 10px;
+  width: 60%;
+  height: 560px; /* Menyesuaikan tinggi elemen */
+  margin: auto;
+}
+
+.image-containerr h1,
+.image-containerr h2,
+.image-containerr h3 {
+  color: white;
+  font-size: 30px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  text-align: left; /* Align text to the left */
+}
+
+.image-containerr h1 {
+  padding-left: 2rem;
+  margin-bottom: 20rem; /* Adjust margin-bottom for better spacing */
+}
+
+.image-containerr h2 {
+  margin-left: 2rem;
+  margin-top: -20rem; /* Set margin-top to 0 */
+  margin-bottom: -0.1rem; /* Adjust margin-bottom for better spacing */
+}
+
+.image-containerr h3 {
+  margin-left: 2rem;
+  margin-top: 0; /* Set margin-top to 0 */
+  margin-bottom: 16rem; /* Adjust margin-bottom for better spacing */
+}
+
+h2 {
+  color: white;
+  font-size: 30px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: left; /* Align text to the left */
+}
+
+p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 2rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.44px;
+  word-wrap: break-word;
+  margin-top: -10px;
+}
+
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Jarak antar tombol */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.social-login button {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  margin: 0; /* Menghapus margin vertikal */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-login button img.logo {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.5rem;
+}
+
+.social-login button.google,
+.social-login button.facebook {
+  border: 1px rgba(255, 255, 255, 0.3) solid;
+  gap: 8px;
+  width: 97%;
+}
+
+.separator-line {
+  width: 70%;
+  height: 1px;
+  border: 1px rgba(255, 255, 255, 0.3) solid;
+}
+
+.separator-linee {
+  width: 70%;
+  flex: 1;
+  height: 1px;
+  border: 1px rgba(255, 255, 255, 0.3) solid;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+  color: #663b9e;
+}
+
+input {
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  background-color: #222436;
+  color: #b3b3b3;
+  width: 100%; /* Lebar 100% */
+  font-size: 14px;
+}
+.passwoord-containerr {
+  position: relative;
+}
+.passwoord-containerr input {
+  padding-right: 40px; /* Space for the icon */
+  background-color: #222436; /* Ensure the background color is consistent */
+  color: #b3b3b3; 
+}
+
+.passwoord-containerr i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  bottom: 30%;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 1;
+}
+
+.checkbox-container input {
+  margin-right: 0.5rem;
+}
+
+.checkbox-container label {
+  font-size: 0.875rem;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #663b9e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  font: bold 1rem "Plus Jakarta Sans", sans-serif; /* Menggabungkan font-size dan font-weight */
+  margin: 10px 0 1rem; /* Menggabungkan margin-top, margin-bottom */
+}
+
+.forgot-passwordd {
+  color: #663b9e;
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: -80px;
+  letter-spacing: 0.36px;
+  display: inline;
+  white-space: nowrap;
+}
+
+.login-link {
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.login-link a {
+  color: #663b9e;
+  text-decoration: none;
+}
+/* Style untuk overlay pop-up */
+.login-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style untuk konten pop-up */
+.login-popup {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  max-width: 400px;
+  width: 90%;
+}
+
+/* Style untuk pesan dalam pop-up */
+.login-popup p {
+  color: #333; /* Ganti dengan warna yang diinginkan */
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Style untuk tombol di pop-up */
+.popup-button.confirmm {
+  background-color: #5e99ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-button.confirmm:hover {
+  background-color: #004ccf;
+}
+
+
+/* Media Queries untuk Responsiveness */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .form-containner {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .form-containner,
+  .image-containerr {
+    margin: 1rem;
+    width: calc(50% - 2rem);
+  }
+
+  .social-login {
+    flex-direction: row;
+    margin: 0 0.5rem;
+  }
+
+  .social-login button {
+    margin-bottom: 1rem;
+  }
+
+  .separator {
+    flex-direction: row;
+    text-align: center;
+    width: auto;
+  }
+
+  .separator-line {
+    width: 70%;
+  }
+
+  .image-containerr {
+    background-size: cover; /* Menyesuaikan background size */
+    height: auto; /* Menyesuaikan tinggi elemen */
+  }
+
+  .image-containerr h1,
+  .image-containerr h2,
+  .image-containerr h3 {
+    color: white;
+    font-size: 30px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    text-align: left; /* Align text to the left */
+  }
+
+  .forgot-passwordd {
+    text-align: center;
+    margin-left: 0;
+    font-size: 12px;
+    margin-left: 248px;
+    margin-top: -20px;
+  }
+
+  .submit-btn {
+    width: auto;
+  }
+
+  input {
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    background-color: #222436;
+    color: #b3b3b3;
+    width: 80%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Ensure it stacks vertically on smaller screens */
+  }
+  .form-containner {
+        background-color: transparent;
+
+  }
+  .form-containner,
+  .image-containerr {
+    margin: 1rem;
+    width: calc(100% - 2rem); /* Adjust width to full width */
+  }
+
+  .social-login {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .separator {
+    flex-direction: row;
+    text-align: center;
+    width: auto;
+  }
+
+  .separator-line {
+    width: 70%;
+  }
+
+  .image-containerr {
+    background-size: cover; /* Menyesuaikan background size */
+    height: auto; /* Menyesuaikan tinggi elemen */
+    display: none; 
+  }
+
+  .submit-btn {
+    width: auto;
+  }
+
+  input {
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    background-color: #222436;
+    color: #b3b3b3;
+    width: 100%; /* Lebar 100% */
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    flex-direction: column; /* Ensure stacking vertically on extra small screens */
+  }
+
+  .form-containner,
+  .image-containerr {
+    margin: 1rem;
+    width: calc(100% - 2rem); /* Adjust width to full width */
+  }
+
+  .social-login {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .separator {
+    flex-direction: row;
+    text-align: center;
+    width: auto;
+  }
+
+  .separator-line {
+    width: 70%;
+  }
+
+  .image-containerr {
+    background-size: cover; /* Menyesuaikan background size */
+    height: auto; /* Menyesuaikan tinggi elemen */
+    background-color: transparent;
+
+  }
+  .submit-btn {
+    width: auto;
+  }
+
+  input {
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    background-color: #222436;
+    color: #b3b3b3;
+    width: 100%; /* Lebar 100% */
+    font-size: 14px;
+  }
+}

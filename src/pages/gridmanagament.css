@@ -1,0 +1,234 @@
+.page-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content-g {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 180px;
+  overflow-y: auto;
+  background-color: #060714;
+}
+
+.content-g h1 {
+  font-size: 26px;
+  margin-top: 50px;
+  margin-left: -405px;
+}
+
+.grid-wrapper {
+  width: calc(100% - 100px); /* Mengatur lebar wrapper grid */
+  height: 80vh; /* Tinggi wrapper grid */
+  overflow: auto; 
+  margin-top: 50px; 
+  margin-left: 100px;
+  padding: 2px; 
+  box-sizing: border-box;
+  padding-left: 2rem;
+
+}
+
+/* Custom style for AG Grid */
+.ag-theme-alpine {
+  --ag-background-color: #21212b; /* Warna latar belakang tabel */
+  --ag-odd-row-background-color: #21212b; /* Warna latar belakang baris ganjil */
+  --ag-header-background-color: #060714; /* Warna latar belakang header tabel */
+  --ag-foreground-color: rgb(255, 255, 255); /* Warna teks */
+}
+
+/* Styling header */
+.ag-header-cell-label {
+  color: #ffffff; /* Warna teks header */
+}
+
+.ag-row-hover {
+  background-color: #3a3a3a; /* Warna latar belakang saat hover */
+}
+
+.ag-header {
+  border-bottom: 2px solid #444; 
+  border-top: 1px solid #444;
+}
+
+.ag-cell {
+  width: 100px; /* Lebar kolom */
+  padding: 10px; /* Padding untuk sel */
+  border-bottom: 1px solid #646464; /* Garis bawah sel */
+  font-size: 14px; /* Ukuran font untuk isi sel */
+  line-height: 1.5; 
+}
+
+.ag-footer-container {
+  background-color: #333; /* Warna latar belakang footer tabel */
+  color: #404040; /* Warna teks footer tabel */
+  padding: 10px; /* Padding footer tabel */
+}
+.ag-root-wrapper {
+  border: 1px solid #646464; /* Tepi tabel */
+  border-radius: 4px; /* Radius sudut tabel jika diinginkan */
+  overflow: hidden; /* Menghindari overflow jika tepi tabel lebih besar dari konten */
+}
+
+
+.role-dropdown {
+  width: 40%;
+  padding: 5px 5px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #8a2be2;
+  color: #fff;
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.action-button {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: -6px 10px; /* Mengurangi padding vertikal dan sedikit mengurangi padding horizontal */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  width: 90px; /* Tetapkan lebar agar konsisten */
+  text-align: center;
+  background-color: #4c5caf;
+  color: white;
+  transition: opacity 0.3s ease;
+  margin-top: -5px;
+}
+
+.action-button:hover {
+  opacity: 0.8;
+}
+
+.delete-button {
+  background-color: #f44336;
+}
+
+/* Sidebar styling */
+#sidebar {
+  width: 280px; 
+  background-color: #060714;
+  color: #fbfbfb;
+  z-index: 1000;
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+}
+
+#sidebar .side-menu {
+  margin-top: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+#sidebar .side-menu li {
+  margin-bottom: 10px;
+}
+
+#sidebar .side-menu li a {
+  display: block;
+  padding: 12px;
+  border-radius: 10px;
+  color: #fbfbfb;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+#sidebar .side-menu li a:hover {
+  background-color: #342e37;
+}
+
+#sidebar .side-menu li.active a {
+  background-color: #342e37;
+}
+
+#sidebar .side-menu li a .bx {
+  margin-right: 10px;
+}
+
+#sidebar .side-menu li a.logout {
+  color: #db504a;
+  margin-top: auto;
+}
+
+#sidebar .side-menu li a.logout:hover {
+  background-color: #342e37;
+}
+
+/* Popup styling */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup h2 {
+  font-size: 20px;
+  margin-top: 20px; /* Mengatur jarak antara ikon dan teks judul */
+  color: black; /* Mengubah warna teks menjadi hitam */
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.popup-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup-button.confirm {
+  background: #dc3545; /* Warna merah untuk tombol konfirmasi */
+  color: white;
+}
+
+.popup-button.cancel {
+  background: #6c757d; /* Warna abu-abu untuk tombol batal */
+  color: white;
+}
+
+.top-bar {
+  justify-content: flex-end;
+  margin-bottom: -20px;
+  width: 300px;
+  margin-left: 940px;
+}
+
+.top-bar .search-inputt {
+  font-size: 14px;
+  padding: 8px 10px;
+}
